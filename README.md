@@ -1,11 +1,36 @@
+## 使用文档
+
+#### yaml文件格式
+
+```yaml
+layers:
+  conv1:
+    type: 'conv' # required 'conv', 'relu', 'pool'
+    size: [ 64, 122, 122 ] # required 
+    caption: [ 64,122,122 ] # optional to adjust the size of cube
+  relu1:
+    type: 'relu'
+    size: [ 16, 122, 122 ]
+    space: 0 # the default of 'relu' layer's space is 0
+
+  conn1:
+    type: 'conn' # 'conn' 'skip conn'
+    from: 'relu1' # previous layer
+    to: 'layer1' # next layer
+```
+
 ## 开发文档
+
 ### 一、类
+
 #### 1.特征层类
+
 ##### 类属性：
 
 ###### name: str 该层名称
 
 ###### channel: int 通道数，显示效果为横向厚度
+
 ###### size=(width, height)：特征图尺寸，宽和高
 
 ###### center=(x,y,z): 中心点坐标**
@@ -17,8 +42,6 @@
 初始：赋值各项属性，新建cube对象，并加入fig
 
 get_cord：获得可以连线的点，顶部中间
-
-
 
 #### 2.连接线类
 
@@ -35,7 +58,5 @@ get_cord：获得可以连线的点，顶部中间
 ###### linewidths: 线条粗细
 
 ##### 类方法：
-
-
 
 ##### 二. yaml文件格式
