@@ -1,0 +1,44 @@
+layers:
+  # the default of 'relu' layer's space is 0
+  # space: 0
+
+  conv1:
+    type: 'conv'
+    size: [ 64, 122, 122 ]
+  relu1:
+    type: 'relu'
+    size: [ 16, 122, 122 ]
+    space: 0
+
+  conn1:
+    type: 'conn'
+    from: 'relu1'
+    to: 'layer1'
+
+  layer1:
+    type: 'conv'
+    size: [ 64, 61, 61 ]
+
+  layer2:
+    type: 'conv'
+    size: [ 128, 31, 31 ]
+
+  layer3:
+    type: 'conv'
+    size: [ 256, 16, 16 ]
+
+  layer4:
+    type: 'conv'
+    size: [ 8, 26,8 ]
+    caption: [ 8, 512, 8 ]
+
+  avgpool:
+    type: 'conv'
+    size: [ 1, 26, 1 ]
+    caption: [ 1,512,1 ]
+
+
+conn:
+  conn1: 64
+  conn2: 50
+  conn3: true
