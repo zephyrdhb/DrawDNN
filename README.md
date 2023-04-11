@@ -2,7 +2,7 @@
 
 以特征层的形式可视化DNN的结构
 
-Visualize DNN in the form of feature layers
+Visualize DNN(Deep Neural Network) in the form of feature layers
 
 #### yaml文件格式
 
