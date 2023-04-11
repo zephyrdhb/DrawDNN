@@ -102,7 +102,7 @@ class feature():
 
 
 if __name__ == '__main__':
-    with open("config.yml", "r") as f:
+    with open("../config.yml", "r") as f:
         config = yaml.load(f, Loader=yaml.FullLoader)  # 使用 FullLoader 避免安全漏洞
 
         fp = None
