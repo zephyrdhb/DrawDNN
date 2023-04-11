@@ -193,7 +193,6 @@ class conn():
             # 根据中心坐标计算出八个顶点的坐标
             x_center, y_center, z_center = center
         else:
-
             x_center, y_center, z_center = 0, 0, 0
 
         y_length, x_length, z_length = xyz_length
