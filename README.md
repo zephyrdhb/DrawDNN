@@ -1,5 +1,8 @@
 ## 使用文档
 
+以特征层的形式可视化DNN的结构
+Visualize DNN in the form of feature layers
+
 #### yaml文件格式
 
 ```yaml
@@ -18,7 +21,10 @@ layers:
     from: 'relu1' # previous layer
     to: 'layer1' # next layer
 ```
-
+运行/run
+```shell
+python feature_ploty.py
+```
 ## 开发文档
 
 ### 一、类
